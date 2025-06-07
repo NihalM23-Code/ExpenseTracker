@@ -1,0 +1,35 @@
+﻿@model ExpenseCategories
+
+<form method="post" asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="border p-3">
+        <div class="mb-3 row">
+            <h2 class="text-black-50 p-3">Add-Category</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-3 row">
+                    <div class="col-4">
+                        <label asp-for="Categoryname"></label>
+                    </div>                   
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-4">
+                        <input asp-for="Categoryname" class="form-control">
+                        <span asp-validation-for="Categoryname" class="text-danger"></span>
+                    </div>                
+                </div>
+                <div class="mb-3" row>
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-primary w-75" value="Create" />
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-danger w-75" asp-action="Index">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
